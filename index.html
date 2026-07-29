@@ -67,18 +67,18 @@
     <section id="about" class="about-section">
         <div class="container about-content">
             <h2>Crafted For Distinction</h2>
-            <p>Zendravi was founded on a simple philosophy: fragrance is not just a scent, but an unspoken signature. Every bottle of Zendravi 1.0 is meticulously blended using fine aromatic extracts to deliver a lasting, luxurious trail throughout your day.</p>
+            <p>Zendravi was founded on a simple philosophy: fragrance is not just a scent, but an unspoken signature. Every bottle of Zendravi 1.0 is meticulously blended using fine aromatic extra[...]</p>
         </div>
     </section>
 
     <!-- Checkout Modal Popup -->
-    <div id="checkout-modal" class="modal-overlay">
-        <div class="modal-card">
-            <button class="close-modal" onclick="closeCheckout()">&times;</button>
-            <h2 class="modal-title">Complete Your Order</h2>
+    <div id="checkout-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card" role="document">
+            <button class="close-modal" onclick="closeCheckout()" aria-label="Close dialog">&times;</button>
+            <h2 class="modal-title" id="modal-title">Complete Your Order</h2>
             <p class="modal-subtitle">Zendravi 1.0 — Total: <strong>Rs. 1499</strong></p>
 
-            <form id="order-form" onsubmit="processOrder(event)">
+            <form id="order-form" class="form-grid" onsubmit="processOrder(event)">
                 <div class="form-group">
                     <label for="fullname">Full Name *</label>
                     <input type="text" id="fullname" required placeholder="John Doe">
