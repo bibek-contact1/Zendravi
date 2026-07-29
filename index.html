@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zendravi | Luxury Fragrances</title>
-    <!-- Google Fonts for premium typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,6 +16,7 @@
             <nav>
                 <a href="#home">Home</a>
                 <a href="#collection">Collection</a>
+                <a href="#about">Our Story</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -37,7 +38,6 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Placeholder image of a luxury perfume -->
                     <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Zendravi 1.0 Perfume Bottle">
                     <div class="badge">Limited Launch</div>
                 </div>
@@ -56,28 +56,111 @@
                         <p><strong>Launch Special:</strong> Only <span id="stock-count">100</span> pieces available at this price!</p>
                     </div>
 
-                    <button class="btn btn-gold" onclick="buyProduct()">Pre-Order Now</button>
-                    <p class="shipping-note">Free shipping nationwide.</p>
+                    <button class="btn btn-gold" onclick="openCheckout()">Buy Now — Rs. 1499</button>
+                    <p class="shipping-note">🔒 Guaranteed Safe & Express Delivery</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h2>ZENDRAVI</h2>
-                <p>zendravi.com</p>
+    <!-- Brand Story Section -->
+    <section id="about" class="about-section">
+        <div class="container about-content">
+            <h2>Crafted For Distinction</h2>
+            <p>Zendravi was founded on a simple philosophy: fragrance is not just a scent, but an unspoken signature. Every bottle of Zendravi 1.0 is meticulously blended using fine aromatic extracts to deliver a lasting, luxurious trail throughout your day.</p>
+        </div>
+    </section>
+
+    <!-- Checkout Modal Popup -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="close-modal" onclick="closeCheckout()">&times;</button>
+            <h2 class="modal-title">Complete Your Order</h2>
+            <p class="modal-subtitle">Zendravi 1.0 — Total: <strong>Rs. 1499</strong></p>
+
+            <form id="order-form" onsubmit="processOrder(event)">
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="phone" required placeholder="98XXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Delivery Address *</label>
+                    <textarea id="address" rows="3" required placeholder="Street Address, Apartment, City, Postal Code"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="payment">Payment Method *</label>
+                    <select id="payment" required>
+                        <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                        <option value="Online / UPI Payment">Online / UPI Payment (QR Scan)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-gold btn-full">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer id="contact" class="site-footer">
+        <div class="container footer-grid">
+            <!-- Col 1: Brand Info -->
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">ZENDRAVI</h3>
+                <p>Redefining luxury fragrances with bold, signature scents crafted for everyday elegance.</p>
+                <p class="brand-domain">www.zendravi.com</p>
             </div>
-            <div class="footer-links">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">Terms & Conditions</a>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Shop Collection</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Customer Care -->
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact -->
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <p>Email: <a href="mailto:support@zendravi.com">support@zendravi.com</a></p>
+                <p>Location: Nepal / Worldwide Delivery</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2026 Zendravi Fragrances. All rights reserved.</p>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Zendravi Fragrances. All rights reserved.</p>
+                <div class="payment-badges">
+                    <span>Cash on Delivery</span>
+                    <span>•</span>
+                    <span>Online Pay</span>
+                    <span>•</span>
+                    <span>UPI</span>
+                </div>
+            </div>
         </div>
     </footer>
 
