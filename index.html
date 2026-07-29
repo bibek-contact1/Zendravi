@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zendravi | Luxury Fragrances</title>
+    <!-- Google Fonts for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">ZENDRAVI</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#collection">Collection</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Define Your Presence</h1>
+            <p>Discover the art of fine fragrance. Exclusive, bold, and unforgettable.</p>
+            <a href="#collection" class="btn btn-primary">Shop The Launch</a>
+        </div>
+    </section>
+
+    <!-- Featured Product Section -->
+    <section id="collection" class="product-section">
+        <div class="container">
+            <h2 class="section-title">The Inaugural Edition</h2>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- Placeholder image of a luxury perfume -->
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Zendravi 1.0 Perfume Bottle">
+                    <div class="badge">Limited Launch</div>
+                </div>
+                
+                <div class="product-details">
+                    <h3>Zendravi 1.0</h3>
+                    <p class="description">Our signature debut fragrance. A sophisticated blend designed for those who leave a lasting impression. Bold notes with an elegant finish.</p>
+                    
+                    <div class="pricing">
+                        <span class="original-price">Rs. 1999</span>
+                        <span class="sale-price">Rs. 1499</span>
+                    </div>
+                    
+                    <div class="urgency-banner">
+                        <span class="pulse-dot"></span>
+                        <p><strong>Launch Special:</strong> Only <span id="stock-count">100</span> pieces available at this price!</p>
+                    </div>
+
+                    <button class="btn btn-gold" onclick="buyProduct()">Pre-Order Now</button>
+                    <p class="shipping-note">Free shipping nationwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>ZENDRAVI</h2>
+                <p>zendravi.com</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Zendravi Fragrances. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
